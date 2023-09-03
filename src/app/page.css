@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6rem;
+  background-color: hsl(208, 100%, 97%);
+}
+.title {
+  display: flex;
+  font-size: large;
+  color: black;
+  font-family: 'Overused Grotesk';
+  font-size: 64pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+.concepts-logo {
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  width: 10vh;
+}
+

@@ -1,19 +1,17 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.css'
 import folder from 'public/folder.png'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-<div>worms</div>
+    <main className='main'>
+      <div className='title'>discofish</div>
       <div>
-        <Image
+        <Image className='concepts-logo'
           src={folder}
           alt="folder Logo"
-          width={200}
-          height={200}
-          priority
         />
+
       </div>
     </main>
   )
