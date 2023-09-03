@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import folder from 'public/folder.png'
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
 <div>worms</div>
       <div>
         <Image
-          src="/folder.png"
+          src={folder}
           alt="folder Logo"
           width={200}
           height={200}
@@ -17,3 +18,5 @@ export default function Home() {
     </main>
   )
 }
+
+
