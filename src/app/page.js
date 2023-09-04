@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import './page.css'
-import folder from '/public/folder.png'
+import folder from './components/folder.png'
 
 export default function Home() {
   return (
