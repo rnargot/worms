@@ -16,10 +16,27 @@
 }
 .concepts-logo {
   display: block;
-  margin-top: auto;
+  margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
   height: 10vh;
   width: 10vh;
+}
+.audio-logo {
+  display: block;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  width: 10vh;
+}
+.category {
+  display: flex;
+  font-size: large;
+  color: black;
+  font-family: 'Overused Grotesk';
+  font-size: 24pt;
+  margin-left: auto;
+  margin-right: auto;
 }
 

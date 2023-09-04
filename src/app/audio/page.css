@@ -1,0 +1,63 @@
+.main {
+    background-image: url('./audio.png');
+    /* background-size: cover; */
+    /* background-repeat: repeat; */
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 200vh;
+}
+.title {
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    color: aliceblue;
+
+}
+.description {
+    font-family: 'Overused Grotesk';
+    font-size: 32pt;
+    color: aliceblue;
+    position: absolute;
+    bottom:0vh;
+    right:0vh;
+}
+.expand {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: aliceblue;
+    position: absolute;
+    bottom:-25vh;
+    left:5vh;
+}
+.expand1 {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: aliceblue;
+    position: absolute;
+    bottom:-45vh;
+    right:0vh;
+}
+.expand2 {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: aliceblue;
+    position: absolute;
+    bottom:-65vh;
+    left:30vh;
+}
+.expand3 {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: aliceblue;
+    position: absolute;
+    bottom:-85vh;
+    left:80vh;
+}
+.expand4 {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: aliceblue;
+    position: absolute;
+    bottom:-100vh;
+    left:5vh;
+}
