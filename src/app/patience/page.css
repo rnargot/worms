@@ -1,0 +1,22 @@
+.main {
+    background-image: url('./audio.png');
+    /* background-size: cover; */
+    /* background-repeat: repeat; */
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+.title {
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    color: aliceblue;
+
+}
+.return {
+    font-family: 'Overused Grotesk';
+    font-size: 32pt;
+    color: aliceblue;
+    right: 0vh;
+    bottom: 0vh;
+}

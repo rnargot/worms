@@ -17,7 +17,7 @@ export default function Home() {
         />
       </div>
       <h1 className="category">
-        <Link href="/audio">concepts</Link>
+        <Link href="/patience">concepts</Link>
       </h1>
       <div>
         <Image className='audio-logo'
@@ -27,6 +27,9 @@ export default function Home() {
           height={200}
         />
       </div>
+      <h1 className="category">
+        <Link href="/patience">portals</Link>
+      </h1>
     </main>
   )
 }
