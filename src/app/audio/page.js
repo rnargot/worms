@@ -4,9 +4,6 @@ import './page.css'
 export default function audio() {
   return (
     <main className='main'>
-      {/* <h2>
-        <Link href="/">Back to home</Link>
-      </h2> */}
       <div className='title'> "audio souvenir TM</div>
       <div className='description'> a personal bank of time traveling keys </div>
       <div className='expand'> an unprogrammed frequency is implanted in the ear canal  </div>

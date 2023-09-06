@@ -39,10 +39,10 @@ export default function Home() {
               </span>
             </div>
             <div className={selected==i ? 'content show' : 'content'}>
-              <p>|__  <Link href={ item.struct_page }>{item.struct}</Link> </p>
-              <p>|__  <Link href={ item.struct1_page }>{item.struct1}</Link></p>
-              <p>|__  <Link href={ item.struct2_page }>{item.struct2}</Link></p>
-              <p>|__  <Link href={ item.struct3_page }>{item.struct3}</Link></p>
+              <div>|__  <Link href={ item.struct_page }>{item.struct}</Link> </div>
+              <div>|__  <Link href={ item.struct1_page }>{item.struct1}</Link></div>
+              <div>|__  <Link href={ item.struct2_page }>{item.struct2}</Link></div>
+              <div>|__  <Link href={ item.struct3_page }>{item.struct3}</Link></div>
             </div>
           </div>
         ))}
