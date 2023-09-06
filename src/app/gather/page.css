@@ -1,0 +1,55 @@
+.main {
+    background-image: url('./gather.png');
+    background-size:cover;
+    /* background-repeat: repeat; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 150vh;
+}
+.title {
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    color: rgba(255, 255, 255, 0.537);
+
+}
+.description {
+    font-family: 'Overused Grotesk';
+    font-size: 32pt;
+    color: black;
+    position: absolute;
+    width: 35vh;
+    bottom:50vh;
+    right:36.5vh;
+    color: rgba(255, 255, 255, 0.537);
+}
+.description1 {
+    font-family: 'Overused Grotesk';
+    font-size: 32pt;
+    color: black;
+    position: absolute;
+    width: 35vh;
+    bottom:40vh;
+    right:36.5vh;
+    color: rgba(255, 255, 255, 0.537);
+}
+.description2 {
+    font-family: 'Overused Grotesk';
+    font-size: 32pt;
+    color: black;
+    position: absolute;
+    width: 35vh;
+    bottom:30vh;
+    right:25vh;
+    color: rgba(255, 255, 255, 0.537);
+}
+.description3 {
+    font-family: 'Overused Grotesk';
+    font-size: 32pt;
+    color: black;
+    position: absolute;
+    width: 35vh;
+    bottom:5vh;
+    right:5vh;
+    color: rgba(255, 255, 255, 0.537);
+}
