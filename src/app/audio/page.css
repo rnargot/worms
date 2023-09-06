@@ -3,9 +3,10 @@
     /* background-size: cover; */
     /* background-repeat: repeat; */
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     width: 100vw;
     height: 200vh;
+    overflow: scroll;
 }
 .title {
     font-family: 'Overused Grotesk';
@@ -26,7 +27,7 @@
     font-size: 16pt;
     color: aliceblue;
     position: absolute;
-    margin-top: 5vh;
+    top: 105vh;
     bottom:-25vh;
     left:5vh;
 }
@@ -35,7 +36,7 @@
     font-size: 16pt;
     color: aliceblue;
     position: absolute;
-    margin-top: 5vh;
+    top: 120vh;
     bottom:-45vh;
     right:0vh;
 }
@@ -44,18 +45,18 @@
     font-size: 16pt;
     color: aliceblue;
     position: absolute;
-    margin-top: 5vh;
+    top: 145vh;
     bottom:-65vh;
-    left:30vh;
+    right:10vh;
 }
 .expand3 {
     font-family: 'Overused Grotesk';
     font-size: 16pt;
     color: aliceblue;
     position: absolute;
-    margin-top: 5vh;
-    bottom:-85vh;
-    left:80vh;
+    top: 175vh;
+    bottom:-65vh;
+    right: 0vh;
 }
 .expand4 {
     font-family: 'Overused Grotesk';

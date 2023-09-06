@@ -1,11 +1,12 @@
 .main {
     background-image: url('./artifacts.png');
-    /* background-size: cover; */
+    background-size: cover;
     /* background-repeat: repeat; */
     display: flex;
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
+    overflow: scroll;
 }
 .title {
     font-family: 'Overused Grotesk';
@@ -15,9 +16,9 @@
 }
 .return {
     position: absolute;
+    left: 50%;
     top: 50vh;
-    right: 50vh;
     font-family: 'Overused Grotesk';
     font-size: 32pt;
-    color: aliceblue;
+    color: rgb(240, 248, 255);
 }
