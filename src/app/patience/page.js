@@ -9,7 +9,7 @@ export default function audio() {
     <main className='main'>
       <div className='title'> "coming soon</div>
       <h2>
-        <Link className='return' href="/" onClick={() => router.reload()}>Back to home</Link>
+        <Link className='return' href="/" onClick={() => router.reload()}>swim home</Link>
       </h2>
     </main>
   );

@@ -1,5 +1,5 @@
 .main {
-    background-image: url('./audio.png');
+    background-image: url('./artifacts.png');
     /* background-size: cover; */
     /* background-repeat: repeat; */
     display: flex;
@@ -14,9 +14,10 @@
 
 }
 .return {
+    position: absolute;
+    top: 50vh;
+    right: 50vh;
     font-family: 'Overused Grotesk';
     font-size: 32pt;
     color: aliceblue;
-    right: 0vh;
-    bottom: 0vh;
 }
