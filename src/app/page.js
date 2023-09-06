@@ -7,8 +7,11 @@ import document from './components/document.png'
 import image from './components/image.png'
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+
+  const router = useRouter()
 
   const [selected, setSelected] = useState(null);
 
@@ -39,10 +42,10 @@ export default function Home() {
               </span>
             </div>
             <div className={selected==i ? 'content show' : 'content'}>
-              <div>|__  <Link href={ item.struct_page }>{item.struct}</Link> </div>
-              <div>|__  <Link href={ item.struct1_page }>{item.struct1}</Link></div>
-              <div>|__  <Link href={ item.struct2_page }>{item.struct2}</Link></div>
-              <div>|__  <Link href={ item.struct3_page }>{item.struct3}</Link></div>
+              <div>|__  <Link href={ item.struct_page } onClick={() => router.reload()}>{item.struct}</Link> </div>
+              <div>|__  <Link href={ item.struct1_page } onClick={() => router.reload()}>{item.struct1}</Link></div>
+              <div>|__  <Link href={ item.struct2_page } onClick={() => router.reload()}>{item.struct2}</Link></div>
+              <div>|__  <Link href={ item.struct3_page } onClick={() => router.reload()}>{item.struct3}</Link></div>
             </div>
           </div>
         ))}
