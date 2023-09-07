@@ -32,7 +32,7 @@ export default function beauty() {
             <div className={selected==0 ? 'content show' : 'content'}>
               <p>|__  a small contribution towards recentering web space around community</p>
             </div>
-            <h2 className='by'>created by </h2>
+            <div className='by'>created by </div>
             <div className='category1' onClick={() => toggle(1)}>
               <h2>margot murvihill</h2>
               <span>

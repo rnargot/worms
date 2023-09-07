@@ -100,7 +100,7 @@ const org = [
     struct2: "me",
     struct2_page: "/me",
     struct3: "other cool shit",
-    struct3_page: "/patience",
+    struct3_page: "/cool",
     img: image,
   },
 ]

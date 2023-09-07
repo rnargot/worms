@@ -27,15 +27,15 @@
 }
 .by {
     font-family: 'Overused Grotesk';
-    font-size: 24pt;
+    font-size: 32pt;
+    color: rgba(255, 255, 255, 0.537);
+    /* align-items: center;
+    margin-left: auto;
+    justify-content: space-between;
     position: absolute;
     width: 50vh;
     top: 240%;
-    left:0%;
-    color: rgba(255, 255, 255, 0.537);
-    align-items: center;
-    margin-left: auto;
-    justify-content: space-between;
+    left:0%; */
 }
 .content {
     max-height: 0;
@@ -46,7 +46,6 @@
     height: auto;
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(1,0,1,0);
-    margin-left: 5vh;
   }
   .category {
     font-size: large;
@@ -55,12 +54,12 @@
     font-size: 24pt;
     display: flex;
     align-items: center;
-    margin-left: auto;
     cursor: pointer;
+    /* margin-left: auto;
     position: absolute;
     top: 60%;
     left:0%;
-    justify-content: space-between;
+    justify-content: space-between; */
 
   }
   .category1 {
@@ -69,12 +68,12 @@
     font-family: 'Overused Grotesk';
     font-size: 24pt;
     display: flex;
-    align-items: center;
-    margin-left: auto;
     cursor: pointer;
+    align-items: center;
+    /* margin-left: auto;
     position: absolute;
     top: 270%;
-    left:0%;
+    left:0%; */
 
   }
   .inspo{
@@ -84,7 +83,7 @@
     font-family: 'Overused Grotesk';
     font-size: 24pt;
     left: 0vh;
-    top: 150%;
+    top: 190%;
   }
   .icon {
     margin-top: 1vh;

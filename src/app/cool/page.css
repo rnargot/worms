@@ -1,0 +1,36 @@
+.main {
+    background-image: url('./fire.png');
+    /* background-size:contain; */
+    /* background-repeat: repeat; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 100vh;
+}
+.title {
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    color: aliceblue;
+
+}
+.description {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: rgba(240, 248, 255, 0.805);
+    position: absolute;
+    width: 35vh;
+    bottom:40vh;
+    right:0vh;
+}
+.logo {
+    display: block;
+    margin-top: 5vh;
+    margin-right: 2vh;
+    height: 10vh;
+    width: 10vh;
+  }
+  .website {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: rgba(240, 248, 255, 0.805);
+  }
