@@ -81,8 +81,8 @@ const org = [
   },
   {
     category: 'words',
-    struct: 'article',
-    struct_page: "/patience",
+    struct: 'well',
+    struct_page: "/well",
     struct1: "...",
     struct1_page: "/patience",
     struct2: "...",
