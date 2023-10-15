@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'W95';
+    src:
+      url('./W95FA.otf');
+  }
+  .main {
+    background-image: url('./well.png');
+    background-size:cover;
+    /* background-repeat: repeat; */
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 100vh;
+    opacity: 70%;
+}
+.header {
+    width: 500px;
+    background-color: rgb(84, 132, 84);
+    border: 3px solid rgb(160, 177, 160);
+    padding: 2px;
+    margin: 5px;
+    font-family: W95;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 5vh; */
+    height: 30px;
+    font-size: 16pt;
+}
+.logo {
+    position: absolute;
+    margin-left: 25.5vw;
+}
+.poem {
+  font-family: 'W95';
+  /* padding-left: 25vw; */
+  padding-left: 30vw;
+  font-size: large;
+  color: white;
+  opacity: 100%;
+}
+.stanza {
+  padding-top: 5vh;
+}
+.stanza1 {
+  /* padding-top: 40vh; */
+  padding-top: 55vh;
+}
+/* .container {
+  width: 500px;
+  border: 5px solid rgb(100, 145, 100);
+  padding: 50px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
