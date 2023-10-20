@@ -1,9 +1,7 @@
 "use client";
 import React from 'react';
 import hurting from 'public/hurting.mp3';
-import Link from 'next/link';
 import './page.css';
-import close from './close.png';
 import { handleClientScriptLoad } from 'next/script';
 import useSound from 'use-sound';
 
