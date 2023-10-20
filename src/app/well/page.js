@@ -1,13 +1,21 @@
 "use client";
-import Image from 'next/image'
+import React from 'react';
+import hurting from 'public/hurting.mp3';
 import Link from 'next/link';
-import './page.css'
-import close from './close.png'
+import './page.css';
+import close from './close.png';
 import { handleClientScriptLoad } from 'next/script';
+import useSound from 'use-sound';
 
 export default function well() {
+
+  const [playSound] = useSound(hurting);
+
   return (
     <main className='main'>
+    <div>
+      <button className='audio' onClick={playSound}>play sound</button>
+    </div>
         <div className='container'>
           <div className='stanza1'>
           <div className='poem'>

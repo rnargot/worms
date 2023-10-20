@@ -32,7 +32,7 @@
 .poem {
   font-family: 'W95';
   /* padding-left: 25vw; */
-  padding-left: 30vw;
+  padding-left: 20vw;
   font-size: large;
   color: white;
   opacity: 100%;
@@ -43,6 +43,13 @@
 .stanza1 {
   /* padding-top: 40vh; */
   padding-top: 55vh;
+}
+.audio {
+  font-family: 'W95';
+  background: grey;
+  padding: 5px 15px;
+  margin-left: 3vw;
+  margin-top: 2vh;
 }
 /* .container {
   width: 500px;
