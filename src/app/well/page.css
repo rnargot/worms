@@ -70,7 +70,8 @@
   padding-left: 20vw;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0,1,0,1)
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+  color: white;
 }
 .content.show {
   font-family: 'W95';
@@ -78,6 +79,7 @@
   height: auto;
   max-height: 9999px;
   transition: all 0.5s cubic-bezier(1,0,1,0);
+  color: white;
 }
 .plus {
   padding-top: 1vh;
