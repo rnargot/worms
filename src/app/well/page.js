@@ -4,10 +4,20 @@ import hurting from 'public/hurting.mp3';
 import './page.css';
 import { handleClientScriptLoad } from 'next/script';
 import useSound from 'use-sound';
+import { useState } from 'react';
 
 export default function well() {
 
   const [playSound] = useSound(hurting);
+  const [selected, setSelected] = useState(null);
+
+  const toggle = i => {
+    if (selected == i) {
+      return setSelected(null)
+    }
+
+    setSelected(i)
+  }
 
   return (
     <main className='main'>
@@ -46,6 +56,16 @@ export default function well() {
           <div className='poem'>
             When will I learn my lesson?
           </div>
+          <div className='category' onClick={() => toggle(0)}>
+
+              <span className='plus'>
+                {selected==0 ? '-' : '+'}
+              </span>
+            </div>
+            <div className={selected==0 ? 'content show' : 'content'}>
+            <p>poem written by grace isabel guis</p>
+            <p>audio produced by sky kistler</p>
+            </div>
           </div>
         </div>
 

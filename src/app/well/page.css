@@ -51,6 +51,40 @@
   margin-left: 3vw;
   margin-top: 2vh;
 }
+.category {
+  font-family: 'W95';
+  font-size: 5pt;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 20vw;
+  /* margin-left: auto;
+  position: absolute;
+  top: 60%;
+  left:0%;
+  justify-content: space-between; */
+}
+.content {
+  font-family: 'W95';
+  padding-left: 20vw;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1)
+}
+.content.show {
+  font-family: 'W95';
+  padding-left: 20vw;
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+}
+.plus {
+  padding-top: 1vh;
+  font-family: 'W95';
+  font-size: 15pt;
+  color: white;
+}
 /* .container {
   width: 500px;
   border: 5px solid rgb(100, 145, 100);
