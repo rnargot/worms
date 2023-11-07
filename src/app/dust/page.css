@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'W95';
+    src:
+      url('./W95FA.otf');
+  }
+  .main {
+    background-image: url('./swim.png');
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    min-height: 100vh;
+    width: 100%;
+    height: 150vh;
+}
+.poem {
+  font-family: 'W95';
+  font-size: 16px;
+  color: black;
+  font-family: W95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn {
+    position: relative;
+    transition: all 0.2s ease;
+    letter-spacing: 0.025em;
+    font-size: .6rem;
+    border-radius: 0.125rem;
+    padding: .6rem 2rem;
+    max-height: 37px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+.btn-primary {
+    color: #000;
+    background-color: #c0c0c0;
+    border-color: #a0a0a0;
+    
+}
+.btn-text {
+    border: 1px solid transparent;
+    font-family: W95;
+    font-size: 12px;
+}
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+.btn:before {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #858585;
+    border-bottom: 2px solid #858585;
+}
+.btn:not(:disabled):not(.disabled):active:before,
+.btn:not(:disabled):not(.disabled):active:focus:before {
+    border-color: transparent;
+    color: #000;
+}
+
+.btn .btn-text {
+    border: 1px solid transparent;
+}
+
+.btn:not(:disabled):not(.disabled):active .btn-text,
+.btn:not(:disabled):not(.disabled):active:focus .btn-text {
+    border: 1px dotted #000;
+}
+.card {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #393939;
+    border-bottom: 2px solid #393939;
+    border-radius: 0;
+    background: #C0C0C0;
+}
+.card-tertiary .card-header {
+    background: #000181;
+    color: white;
+}
+.card-header {
+    position: relative;
+    background: #808080;
+    font-size: .65rem;
+    padding: 4px;
+    color: #C9C9C9;
+    border-radius: 0;
+    border: 2px solid #BDBDBD;
+ }
+ .card-header .icon {
+    position: absolute;
+    top: -5px;
+    left: -3px;
+}
+
+.icon-xs {
+    transform: scale(.5);
+}
+.w95-folder {
+    width: 32px; height: 32px;
+}
+.card-body {
+    padding: 10px 7px;
+    border-top: 2px solid #BDBDBD;
+    border-left: 3px solid #BDBDBD;
+    border-right: 3px solid #BDBDBD;
+    border-bottom: 2px solid #bdbdbd;
+}
+
