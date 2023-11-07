@@ -36,7 +36,7 @@
     justify-content: center;
     flex-direction: column;
     display: flex;
-    margin-left: 5vw;
+    margin-left: vw;
     margin-top: 5vh;
 }
 .btn-primary {
