@@ -37,7 +37,7 @@ export default function sub() {
 <div className='poem'>1600 2nd Ave</div>
 <br></br>
 <div className='poem1'>when</div>
-<div className='poem'>Saturday, Nov 10 @ 8pm</div>
+<div className='poem'>Saturday, Nov 11 @ 8pm</div>
 <br></br>
 <div className='poem1'>why</div>
 <div className='poem'>to share joy & make my dearest friend grace feel special in seattle!</div>
