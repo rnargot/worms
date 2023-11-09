@@ -28,7 +28,7 @@ export default function sub() {
 <br></br>
 <div className='poem1'>what</div>
 <div className='poem'>powerpoint/karaoke party!</div>
-<div className='poem'>we want to hear about your hobbies, life altering media tier lists, cursed tweet drafts & terrible date stories</div>
+<div className='poem'>we want to hear talk about literally anything</div>
 <div className='poem'>bring your favorite food and drink!</div>
 <div className='poem'></div>
 <br></br>
@@ -40,7 +40,7 @@ export default function sub() {
 <div className='poem'>Saturday, Nov 10 @ 8pm</div>
 <br></br>
 <div className='poem1'>why</div>
-<div className='poem'>to share laughs, passions & love</div>
+<div className='poem'>to share joy & laughs</div>
 <div className='poem'>& make my dearest friend grace feel special during their visit in seattle!</div>
 <br></br>
 <div className='poem'>txt margo with questions or help with ideas</div>
