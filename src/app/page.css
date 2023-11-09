@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5vh;
+    background-color: hsl(208, 100%, 97%);
+    overflow-x: scroll;
+    width: 100vw;
+  }
+  .title {
+    display: flex;
+    font-size: large;
+    color: black;
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    display: block;
+    margin-top: 5vh;
+    margin-right: 2vh;
+    height: 10vh;
+    width: 10vh;
+  }
+  .concepts-accordion {
+    font-size: large;
+    color: black;
+    font-family: 'Overused Grotesk';
+    font-size: 24pt;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1)
+  }
+  .content.show {
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+  }
+  .category {
+    font-size: large;
+    color: black;
+    font-family: 'Overused Grotesk';
+    font-size: 24pt;
+    display: flex;
+    align-items: center;
+  
+    
+  }
