@@ -1,106 +1,53 @@
 "use client";
-import Image from 'next/image'
-import './page.css'
-import folder from './components/folder.png'
-import cd from './components/cd.png'
-import document from './components/document.png'
-import image from './components/image.png'
+import React from 'react';
 import Link from 'next/link';
+import './page.css'
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'
+import PopupPoem from './PopupPoem';
+import Popup from './Popup';
 
-export default function Home() {
-
-  const router = useRouter()
-
-  const [selected, setSelected] = useState(null);
-
-  const toggle = i => {
-    if (selected == i) {
-      return setSelected(null)
-    }
-
-    setSelected(i)
-  }
+export default function sub() {
+    const [buttonPopup, setButtonPopup] = useState(false)
+    const [buttonPopup1, setButtonPopup1] = useState(true)
 
   return (
     <main className='main'>
-      <div className='title'>discofish</div>
-      <div className='concepts-accordion'>
-        {org.map((item, i) => (
-          <div className='item'>
-            <div className='category' onClick={() => toggle(i)}>
-            <Image className='logo'
-               src={item.img}
-               alt="folder Logo"
-                width={200}
-                height={200}
-              />
-              <h2>{item.category}</h2>
-              <span>
-                {selected==i ? '-' : '+'}
-              </span>
-            </div>
-            <div className={selected==i ? 'content show' : 'content'}>
-              <div>|__  <Link href={ item.struct_page } onClick={() => router.reload()}>{item.struct}</Link> </div>
-              <div>|__  <Link href={ item.struct1_page } onClick={() => router.reload()}>{item.struct1}</Link></div>
-              <div>|__  <Link href={ item.struct2_page } onClick={() => router.reload()}>{item.struct2}</Link></div>
-              <div>|__  <Link href={ item.struct3_page } onClick={() => router.reload()}>{item.struct3}</Link></div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </main>
-  )
-}
+            <Popup trigger={buttonPopup1} setTrigger={setButtonPopup1}> 
+        <br></br>
+        <div className='card-text'>do you know that you are dearly loved?</div>
+        <br></br>
+        <button className='btn btn-primary' onClick={() => setButtonPopup(true) & setButtonPopup1(false)}>
+        <div className='btn-text'>yes</div>
+        </button>
+        </Popup>
+        <PopupPoem trigger={buttonPopup} setTrigger={setButtonPopup}>
 
-const org = [
-  {
-    category: 'concepts',
-    struct: "audio souvenir",
-    struct_page: "/audio",
-    struct1: "artifacts",
-    struct1_page: "/artifacts",
-    struct2: "beauty for harness",
-    struct2_page: "/beauty",
-    struct3: "gather",
-    struct3_page: "/gather",
-    img: folder,
-  },
-  {
-    category: 'audio',
-    struct: 'well',
-    struct_page: "/well",
-    struct1: "...",
-    struct1_page: "/patience",
-    struct2: "...",
-    struct2_page: "/patience",
-    struct3: "...",
-    struct3_page: "/patience",
-    img: cd,
-  },
-  {
-    category: 'words',
-    struct: 'river',
-    struct_page: "/sub",
-    struct1: "dust",
-    struct1_page: "/dust",
-    struct2: "well",
-    struct2_page: "/well",
-    struct3: "...",
-    struct3_page: "/patience",
-    img: document,
-  },
-  {
-    category: 'about',
-    struct: 'me',
-    struct_page: "/me",
-    struct1: "other cool shit",
-    struct1_page: "/cool",
-    struct2: "...",
-    struct2_page: "/patience",
-    struct3: "...",
-    struct3_page: "/patience",
-    img: image,
-  },
-]
+<br></br>
+<div className='poem1'>who</div>
+<div className='poem'>margo's beloved friends</div>
+<br></br>
+<div className='poem1'>what</div>
+<div className='poem'>powerpoint/karaoke party!</div>
+<div className='poem'>we want to hear about your hobbies, life altering media tier lists, cursed tweet drafts & terrible date stories</div>
+<div className='poem'>bring your favorite food and drink!</div>
+<div className='poem'></div>
+<br></br>
+<div className='poem1'>where</div>
+<div className='poem'>RainyHaus</div>
+<div className='poem'>1600 2nd Ave</div>
+<br></br>
+<div className='poem1'>when</div>
+<div className='poem'>Saturday, Nov 10 @ 8pm</div>
+<br></br>
+<div className='poem1'>why</div>
+<div className='poem'>to share laughs, passions & love</div>
+<div className='poem'>& make my dearest friend grace feel special during their visit in seattle!</div>
+<br></br>
+<div className='poem'>txt margo with questions or help with ideas</div>
+<br></br>
+<br></br>
+</PopupPoem>
+            <div className='credit'>see u soon besties ^_^</div>
+        </main>
+  );
+}
