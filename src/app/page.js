@@ -8,21 +8,15 @@ import image from './components/image.png'
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
-
 export default function Home() {
-
   const router = useRouter()
-
   const [selected, setSelected] = useState(null);
-
   const toggle = i => {
     if (selected == i) {
       return setSelected(null)
     }
-
     setSelected(i)
   }
-
   return (
     <main className='main'>
       <div className='title'>discofish</div>
@@ -53,7 +47,6 @@ export default function Home() {
     </main>
   )
 }
-
 const org = [
   {
     category: 'concepts',
@@ -69,8 +62,8 @@ const org = [
   },
   {
     category: 'audio',
-    struct: 'music',
-    struct_page: "/patience",
+    struct: 'well',
+    struct_page: "/well",
     struct1: "...",
     struct1_page: "/patience",
     struct2: "...",
@@ -81,25 +74,31 @@ const org = [
   },
   {
     category: 'words',
-    struct: 'article',
-    struct_page: "/patience",
-    struct1: "...",
-    struct1_page: "/patience",
+    struct: 'dust',
+    struct_page: "/dust",
+    struct1: "well",
+    struct1_page: "/well",
     struct2: "...",
     struct2_page: "/patience",
+    struct: 'river',
+    struct_page: "/sub",
+    struct1: "dust",
+    struct1_page: "/dust",
+    struct2: "well",
+    struct2_page: "/well",
     struct3: "...",
     struct3_page: "/patience",
     img: document,
   },
   {
     category: 'about',
-    struct: '...',
-    struct_page: "/patience",
-    struct1: "...",
-    struct1_page: "/patience",
-    struct2: "me",
-    struct2_page: "/me",
-    struct3: "other cool shit",
+    struct: 'me',
+    struct_page: "/me",
+    struct1: "other cool shit",
+    struct1_page: "/cool",
+    struct2: "...",
+    struct2_page: "/patience",
+    struct3: "...",
     struct3_page: "/patience",
     img: image,
   },
