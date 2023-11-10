@@ -74,12 +74,6 @@ const org = [
   },
   {
     category: 'words',
-    struct: 'dust',
-    struct_page: "/dust",
-    struct1: "well",
-    struct1_page: "/well",
-    struct2: "...",
-    struct2_page: "/patience",
     struct: 'river',
     struct_page: "/sub",
     struct1: "dust",
