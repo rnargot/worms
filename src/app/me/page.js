@@ -7,10 +7,8 @@ import ig from './ig.png';
 import git from './git.png';
 import spotify from './spotify.png';
 import Image from 'next/image'
-
 export default function beauty() {
     const [selected, setSelected] = useState(null);
-
     const toggle = i => {
       if (selected == i) {
         return setSelected(null)
@@ -32,6 +30,7 @@ export default function beauty() {
             <div className={selected==0 ? 'content show' : 'content'}>
               <p>|__  a small contribution towards recentering web space around community</p>
             </div>
+            <h2 className='by'>created by </h2>
             <div className='by'>created by </div>
             <div className='category1' onClick={() => toggle(1)}>
               <h2>margot murvihill</h2>
@@ -80,16 +79,12 @@ export default function beauty() {
                 height={50}
               />
               </a>
-
-
             </div>
           </div>
-
       <div className='inspo'> inspired by ambient creators </div>
       {/* <div className='description1'> a small contribution towards reinventing web space  </div>
       <div className='description2'> you are safe here  </div> */}
       <>
-
       </>
     </main>
   );
