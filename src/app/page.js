@@ -8,6 +8,9 @@ import image from './components/image.png'
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
+import { Analytics } from '@vercel/analytics/react';
+
+
 export default function Home() {
   const router = useRouter()
   const [selected, setSelected] = useState(null);
@@ -44,6 +47,7 @@ export default function Home() {
           </div>
         ))}
       </div>
+     <Analytics />
     </main>
   )
 }
