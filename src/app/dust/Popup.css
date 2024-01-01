@@ -4,20 +4,16 @@
       url('./W95FA.otf');
   }
   .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position:relative;
+    top: 5vh;
+    left: 5vw;
+    /* justify-content:space-around; */
+    /* align-items:self-start; */
     font-family: W95;
 }
 .card {
-    position: relative;
     padding: 32 px;
-    width: 30vw; 
+    width: 25vw; 
     height: 15vh;
     max-width: 640;
     border-top: 2px solid white;

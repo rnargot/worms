@@ -1,8 +1,10 @@
+import Draggable from 'react-draggable';
 import React from 'react'
 import './Popup.css'
 
 function Popup(props) {
     return (props.trigger) ? ( 
+        <Draggable> 
         <div className='popup'>
             <div className='card card-tertiary'>
                 <div className='card-header'>
@@ -13,6 +15,8 @@ function Popup(props) {
             </div>
 
         </div>
+        </Draggable>
+
     ) : "";
 }
 
