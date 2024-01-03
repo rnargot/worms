@@ -1,14 +1,16 @@
 "use client";
+
+import { useEffect, useState } from 'react';
 import React from 'react';
-import hurting from 'public/hurting.mp3';
 import './page.css';
-import { handleClientScriptLoad } from 'next/script';
-import useSound from 'use-sound';
-import { useState } from 'react';
+
+import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 
 export default function well() {
-
-  const [playSound] = useSound(hurting);
+  const bucket = 'discofish'
+  const key = 'worms/audio/hurting.mp3'
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [sound, setSound] = useState(null);
   const [selected, setSelected] = useState(null);
 
   const toggle = i => {
@@ -19,10 +21,75 @@ export default function well() {
     setSelected(i)
   }
 
+  useEffect(() => {
+    const fetchSound = async () => {
+      try {
+
+        // Configure AWS SDK
+        const s3 = new S3Client({
+          region: 'us-east-2',
+          credentials: {
+            accessKeyId: process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY,
+          },
+        });
+        
+        // Fetch the audio file
+        const { Body } = await s3.send(new GetObjectCommand({ Bucket: bucket, Key: key }));
+
+        const blob = await streamToBlob(Body);
+        const objectUrl = URL.createObjectURL(blob);
+
+        var audio = new Audio(objectUrl);
+        
+        setSound(audio);
+      } catch (error) {
+        console.error('Error fetching mp3:', error);
+      }
+    };
+
+    fetchSound();
+  }, []);
+
+  // Function to convert a ReadableStream to a Blob
+  async function streamToBlob(readableStream) {
+    const reader = readableStream.getReader();
+    const chunks = [];
+
+    while (true) {
+      const { done, value } = await reader.read();
+
+      if (done) {
+        break;
+      }
+
+      if (!(value instanceof Uint8Array)) {
+        throw new Error('Invalid value type in ReadableStream');
+      }
+
+      chunks.push(value);
+    }
+
+    return new Blob(chunks, { type: 'audio/mpeg' });
+  }
+
+  const handlePlaySound = () => {
+    if (sound) {
+      if (isPlaying) {
+        sound.pause(); // Pause the audio
+      } else {
+        sound.play(); // Play the audio
+      }
+    }
+
+    // Toggle the playback status
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <main className='main'>
     <div>
-      <button className='audio' onClick={playSound}>play sound</button>
+      <button className='audio' onClick={handlePlaySound}>{isPlaying ? 'pause sound' : 'play sound'}</button>
     </div>
         <div className='container'>
           <div className='stanza1'>

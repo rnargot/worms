@@ -51,6 +51,7 @@
   margin-left: 3vw;
   margin-top: 2vh;
   color: white;
+  position: fixed;
 }
 .category {
   font-family: 'W95';
