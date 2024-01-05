@@ -1,0 +1,37 @@
+.main {
+    background-image: url('./confess.png');
+    background-size:contain;
+    width: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.title {
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    color: aliceblue;
+    overflow-x: scroll;
+    overflow-y: scroll;
+
+}
+.description {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color:aliceblue;
+    position: absolute;
+    width: 35vh;
+    bottom:40vh;
+    right:0vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'W95';
+    font-size: 16px;
+    color: black;
+    font-family: W95;
+    padding-left: 0.5vw;
+}

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'W95';
+    src:
+      url('./W95FA.otf');
+  }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: W95;
+}
+.card {
+    position: fixed;
+    /* padding: 32 px; */
+    width: 300px; 
+    height: 130px;
+    max-width: 640;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #393939;
+    border-bottom: 2px solid #393939;
+    border-radius: 0;
+    background: #C0C0C0;
+}
+.card-tertiary .card-header {
+    background: #000181;
+    color: white;
+}
+.card-header {
+    position: relative;
+    background: #808080;
+    font-size: .65rem;
+    padding: 4px;
+    color: #C9C9C9;
+    border-radius: 0;
+    border: 2px solid #BDBDBD;
+ }
+.header-text {
+    border: 1px solid transparent;
+    font-family: W95;
+    font-size: 16px;
+    color: white;
+}
+.pbtn {
+    position: absolute;
+    transition: all 0.2s ease;
+    letter-spacing: 0.025em;
+    font-size: .6rem;
+    border-radius: 0.125rem;
+    padding: .6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+
+}
+.pbtn-primary {
+    color: #000;
+    background-color: #c0c0c0;
+    border-color: #a0a0a0;
+}
+.pbtn:before,
+.pbtn:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+.pbtn:before {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #858585;
+    border-bottom: 2px solid #858585;
+}
+.pbtn:not(:disabled):not(.disabled):active:before,
+.pbtn:not(:disabled):not(.disabled):active:focus:before {
+    border-color: transparent;
+    color: #000;
+}
+
+.pbtn .pbtn-text {
+    border: 1px solid transparent;
+}
+
+.pbtn:not(:disabled):not(.disabled):active .pbtn-text,
+.pbtn:not(:disabled):not(.disabled):active:focus .pbtn-text {
+    border: 1px dotted #000;
+}
+
+
