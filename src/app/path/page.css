@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'W95';
+    src:
+      url('./W95FA.otf');
+  }
+  .main {
+    background-image: url('./path.png');
+    background-size:contain;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.card-header {
+  position: relative;
+  background: #808080;
+  font-size: .65rem;
+  padding: 4px;
+  color: #C9C9C9;
+  border-radius: 0;
+  border: 2px solid #BDBDBD;
+  overflow-x: scroll;
+}
+.header-text {
+  border: 1px solid transparent;
+  font-family: W95;
+  font-size: 16px;
+  color: white;
+  overflow-x: scroll;
+}
+.pbtn {
+  position: absolute;
+  transition: all 0.2s ease;
+  letter-spacing: 0.025em;
+  font-size: .6rem;
+  border-radius: 0.125rem;
+  padding: .6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+
+}
+.pbtn-primary {
+  color: #000;
+  background-color: #c0c0c0;
+  border-color: #a0a0a0;
+}

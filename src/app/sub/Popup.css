@@ -15,10 +15,10 @@
     font-family: W95;
 }
 .card {
-    position: relative;
-    padding: 32 px;
-    width: 30vw; 
-    height: 15vh;
+    position: fixed;
+    /* padding: 32 px; */
+    width: 300px; 
+    height: 130px;
     max-width: 640;
     border-top: 2px solid white;
     border-left: 2px solid white;

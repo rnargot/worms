@@ -5,11 +5,8 @@ function Popup(props) {
     return (props.trigger) ? ( 
         <div className='popup'>
             <div className='card card-tertiary'>
-                <div className='card-header'>
-                <div className="header-text">admission</div>
-                </div>
                 { props.children }
-
+                <button className='cbtn cbtn-primary' onClick={() => props.setTrigger(false)}>X</button>
             </div>
 
         </div>

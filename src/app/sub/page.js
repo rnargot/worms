@@ -12,23 +12,11 @@ export default function sub() {
 
   return (
     <main className='main'>
-                {/* <div className='card card-tertiary'>
-                <div className='card-header'>
-                <div className="header-text">admission</div>
-                </div>
-                <br></br>
-                <div className='card-text'>Do you know that I am always with you?</div>
-                <br></br>
-                <button className='btn btn-primary' onClick={() => setButtonPopup(true)}>
-            <div className='btn-text'>Yes</div>
-            </button>
-            </div> */}
-
         <Popup trigger={buttonPopup1} setTrigger={setButtonPopup1}> 
         <br></br>
         <div className='card-text'>Do you know that I am always with you?</div>
         <br></br>
-        <button className='btn btn-primary' onClick={() => setButtonPopup(true) & setButtonPopup1(false)}>
+        <button className='pbtn pbtn-primary' onClick={() => setButtonPopup(true) & setButtonPopup1(false)}>
         <div className='btn-text'>Yes</div>
         </button>
         </Popup>
