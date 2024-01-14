@@ -60,8 +60,8 @@ const org = [
     struct1_page: "/dust",
     struct2: "well",
     struct2_page: "/well",
-    struct3: "...",
-    struct3_page: "/patience",
+    struct3: "tummy",
+    struct3_page: "/tummy",
     img: document,
   },
   {

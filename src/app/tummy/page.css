@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'W95';
+    src:
+      url('./W95FA.otf');
+  }
+.main {
+    background-image: url('./tummy.png');
+    background-size:contain;
+    width: 100%;
+    height: 100vh;
+}
+.title {
+    font-family: 'Overused Grotesk';
+    font-size: 64pt;
+    color: aliceblue;
+
+}
+.btn {
+    position: relative;
+    transition: all 0.2s ease;
+    letter-spacing: 0.025em;
+    font-size: .6rem;
+    border-radius: 0.125rem;
+    padding: .6rem 2rem;
+    max-height: 37px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+.btn-primary {
+    color: #000;
+    background-color: #c0c0c0;
+    border-color: #a0a0a0;
+    
+}
+.btn-text {
+    border: 1px solid transparent;
+    font-family: W95;
+    font-size: 12px;
+}
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+.btn:before {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #858585;
+    border-bottom: 2px solid #858585;
+}
+.btn:not(:disabled):not(.disabled):active:before,
+.btn:not(:disabled):not(.disabled):active:focus:before {
+    border-color: transparent;
+    color: #000;
+}
+
+.btn .btn-text {
+    border: 1px solid transparent;
+}
+
+.btn:not(:disabled):not(.disabled):active .btn-text,
+.btn:not(:disabled):not(.disabled):active:focus .btn-text {
+    border: 1px dotted #000;
+}
