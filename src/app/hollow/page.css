@@ -37,6 +37,17 @@
     color: black;
     cursor: pointer;
   }
+  .honor {
+    font-family: 'Overused Grotesk';
+    background: rgba(128, 128, 128, 0);
+    font-size: 24pt;
+    padding: 5px 15px;
+    margin-left: 1vw;
+    margin-top: 10vh;
+    color: black;
+    cursor: pointer;
+  }
+.categ
 .category {
     font-size: large;
     color: black;

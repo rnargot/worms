@@ -118,6 +118,18 @@ export default function hollow() {
               <p>oranges peeled in one stroke, always does the most</p>
               <p>but could  your love set her free?</p>
             </div>
+            <div>
+    <div className='honor' onClick={() => toggle(2)}>
+              step 4: honor
+              <span>
+                {selected==2 ? '-' : '+'}
+              </span>
+            </div>
+            </div>
+            <div className={selected==2 ? 'content show' : 'content'}>
+              <p>vocals and words by quincie ndiaye</p>
+            </div>
+    
     </main>
   );
 }
