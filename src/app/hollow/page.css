@@ -1,0 +1,63 @@
+.main {
+    background-image: url('./hollow2.png');
+    background-size: contain;
+    width: 100vw;
+    height: 150vh;
+    display:flex;
+    flex-direction: column;
+    
+}
+.audio {
+    font-family: 'Overused Grotesk';
+    background: rgba(128, 128, 128, 0);
+    font-size: 24pt;
+    padding: 5px 15px;
+    margin-left: 1vw;
+    margin-top: 20vh;
+    color: black;
+  }
+.hollow {
+    font-family: 'Overused Grotesk';
+    background: rgba(128, 128, 128, 0);
+    font-size: 24pt;
+    padding: 5px 15px;
+    margin-left: 1vw;
+    margin-top: 10vh;
+    color: black;
+  }
+  .free {
+    font-family: 'Overused Grotesk';
+    background: rgba(128, 128, 128, 0);
+    font-size: 24pt;
+    padding: 5px 15px;
+    margin-left: 1vw;
+    margin-top: 10vh;
+    color: black;
+  }
+.category {
+    font-size: large;
+    color: black;
+    font-family: 'Overused Grotesk';
+    font-size: 24pt;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+  }
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    font-size: large;
+    color: black;
+    font-family: 'Overused Grotesk';
+  }
+  .content.show {
+    height: auto;
+    max-height: 9999px;
+    font-size: large;
+    color: black;
+    font-family: 'Overused Grotesk';
+    margin-top: 50vh;
+    margin-left: 43vw;
+    position: fixed;
+  }
