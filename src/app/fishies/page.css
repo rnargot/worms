@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'W95';
+    src:
+      url('./W95FA.otf');
+  }
+.main {
+    background-image: url('./fishiess.png');
+    background-size:cover;
+    width: 100vw;
+    height: 150vh;
+    font-family: W95;
+}
+.disco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.marctoast {
+    display: flex;
+    margin-top: -10px;
+    margin-left: 400px;
+    font-family: 'Overused Grotesk';
+    color: black;
+}
+.mother {
+    display: flex;
+    margin-top: -50px;
+    margin-left: 100px;
+    font-family: 'Overused Grotesk';
+    color: black;
+}
+.grace {
+    display: flex;
+    margin-top: -10px;
+    margin-left: 1000px;
+    font-family: 'Overused Grotesk';
+    color: black;
+}
+.skyfish {
+    display: flex;
+    margin-top: -10px;
+    margin-left: 100px;
+    font-family: 'Overused Grotesk';
+    color: black;
+}
+
