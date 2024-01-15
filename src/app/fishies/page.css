@@ -34,8 +34,8 @@
 }
 .grace {
     display: flex;
-    margin-top: -10px;
-    margin-left: 1000px;
+    margin-top: -40px;
+    margin-left: 800px;
     font-family: 'Overused Grotesk';
     color: black;
 }
@@ -43,6 +43,13 @@
     display: flex;
     margin-top: -10px;
     margin-left: 100px;
+    font-family: 'Overused Grotesk';
+    color: black;
+}
+.quincie {
+    display: flex;
+    margin-top: -150px;
+    margin-left: 1200px;
     font-family: 'Overused Grotesk';
     color: black;
 }

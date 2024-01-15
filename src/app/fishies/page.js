@@ -9,6 +9,7 @@ import marctoast from './marctoast.gif'
 import mother from './mother.gif'
 import gracefish from './gracefish.gif'
 import skyfish from './skyfish.gif'
+import quincie from './quinciefish.gif'
 
 export default function fishies() {
   return (
@@ -35,7 +36,15 @@ export default function fishies() {
                 height={100}
                 unoptimized={true}
               />
-              <div className='marctoast'>marcos montes de oca</div>
+            <div className='marctoast'>marcos montes de oca</div>
+            <Image className='quincie'
+               src={quincie}
+               alt="quincie"
+                width={150}
+                height={150}
+                unoptimized={true}
+              />
+            <div className='quincie'>quincie ndiaye</div>
             <Image className='grace'
                src={gracefish}
                alt="gracefish"
@@ -52,6 +61,7 @@ export default function fishies() {
                 unoptimized={true}
               />
             <div className='skyfish'>sky kistler</div>
+
     </main>
   );
 }

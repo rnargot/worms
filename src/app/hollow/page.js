@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import './page.css'
+import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 
 
 export default function hollow() {
@@ -85,12 +86,15 @@ export default function hollow() {
   return (
     <main className='main'>
     <div>
-      <button className='audio' onClick={handlePlaySound}>{isPlaying ? 'step -1: float' : 'step 1: drown'}</button>
+      <div className='audio' onClick={handlePlaySound}>{isPlaying ? 'step 1: drown-' : 'step 1: drown+'}</div>
     </div>
     <div>
-    <button className='hollow' onClick={() => toggle(0)}>
+    <div className='hollow' onClick={() => toggle(0)}>
               step 2: hollow
-            </button>
+              <span>
+                {selected==0 ? '-' : '+'}
+              </span>
+            </div>
             </div>
             <div className={selected==0 ? 'content show' : 'content'}>
               <p>she had been hollow, barrel and rag doll</p>
@@ -101,9 +105,12 @@ export default function hollow() {
               <p>from what was once a brush with passion</p>
             </div>
             <div>
-    <button className='free' onClick={() => toggle(1)}>
+    <div className='free' onClick={() => toggle(1)}>
               step 3: free
-            </button>
+              <span>
+                {selected==1 ? '-' : '+'}
+              </span>
+            </div>
             </div>
             <div className={selected==1 ? 'content show' : 'content'}>
               <p>doubtful and deceitful as can be</p>
