@@ -43,6 +43,7 @@ export default function Home() {
               <div>|__  <Link href={ item.struct1_page } onClick={() => router.reload()}>{item.struct1}</Link></div>
               <div>|__  <Link href={ item.struct2_page } onClick={() => router.reload()}>{item.struct2}</Link></div>
               <div>|__  <Link href={ item.struct3_page } onClick={() => router.reload()}>{item.struct3}</Link></div>
+              <div>|__  <Link href={ item.struct4_page } onClick={() => router.reload()}>{item.struct4}</Link></div>
             </div>
           </div>
         ))}
@@ -62,6 +63,8 @@ const org = [
     struct2_page: "/well",
     struct3: "tummy",
     struct3_page: "/tummy",
+    struct4: "brainrot",
+    struct4_page: "/brain",
     img: document,
   },
   {
@@ -74,6 +77,8 @@ const org = [
     struct2_page: "/well",
     struct3: "hollow",
     struct3_page: "/hollow",
+    struct4: "...",
+    struct4_page: "/patience",
     img: cd,
   },
   {
@@ -86,6 +91,8 @@ const org = [
     struct2_page: "/beauty",
     struct3: "gather",
     struct3_page: "/gather",
+    struct4: "brainrotrot",
+    struct4_page: "/brain",
     img: folder,
   },
   {
@@ -98,6 +105,8 @@ const org = [
     struct2_page: "/cool",
     struct3: "...",
     struct3_page: "/patience",
+    struct4: ".....",
+    struct4_page: "/patience",
     img: image,
   },
 ]
