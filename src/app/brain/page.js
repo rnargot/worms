@@ -4,38 +4,43 @@ import React, { useEffect, useState } from 'react';
 import './page.css'
 import PopupPoem from './PopupPoem';
 import Popup from './Popup';
+import thoughts from './thoughts';
 
 
 
 export default function brain() {
 
-  const [components, setComponents] = useState([]);
-
-  useEffect(() => {
-    const numberOfComponents = 100;
-
-    function Component() {
-        return (
-                <Popup > 
-                <br></br>
-                <div className='card-text'>what if i cant breathe</div>
-                <br></br>
-                </Popup>
-
-        );
-      }
-
-    const componentsArray = Array.from({ length: numberOfComponents }, (_, index) => <Component key={index} />);
-    setComponents(componentsArray);
-  }, []);
+    const withRandomString = (Component) => {
+    return () => {
+      const randomIndex = Math.floor(Math.random() * thoughts.length);
+      const randomString = thoughts[randomIndex];
+      return <Component randomString={randomString} />;
+    };
+  };
+  
+  // Your component that displays the random string
+  const DisplayComponent = ({ randomString }) => {
+    return (
+        <Popup> 
+        <br></br>
+        <div className='card-text'>{randomString}</div>
+        <br></br>
+        </Popup>
+    )
+  };
+  
+  const RandomStringComponents = [...Array(200)].map((_, index) => {
+    const WrappedComponent = withRandomString(DisplayComponent);
+    return <WrappedComponent key={index} />;
+  });
 
 
   return (
     <main className='main'>
         <div> 
-            {components}
+            {RandomStringComponents}
         </div>
-        <div className='credit'>what if im scared of</div>
+        <div className='credit'>i love you</div>
         </main>
   );
 }
