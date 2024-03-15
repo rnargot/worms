@@ -10,8 +10,8 @@ function Popup(props) {
         buttonPopup &&
         <Draggable>
         <div className='card card-tertiary' style={{
-                top: `${Math.floor(Math.random() * 1000)}px`,
-                left: `${Math.floor(Math.random() * 1500)}px`
+                top: `${Math.floor(Math.random() * 1000)-50}px`,
+                left: `${Math.floor(Math.random() * 2000)-100}px`
               }}>
                 <div className='card-header'>
                 <div className="header-text">here</div>
