@@ -1,8 +1,6 @@
 "use client";
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 import './page.css'
-import PopupPoem from './PopupPoem';
 import Popup from './Popup';
 import thoughts from './thoughts';
 
