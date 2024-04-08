@@ -77,8 +77,8 @@ const org = [
     struct2_page: "/well",
     struct3: "hollow",
     struct3_page: "/hollow",
-    struct4: "...",
-    struct4_page: "/patience",
+    struct4: "find",
+    struct4_page: "/find",
     img: cd,
   },
   {
