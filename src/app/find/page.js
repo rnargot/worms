@@ -1,18 +1,88 @@
 "use client";
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './page.css'
+import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 
 export default function find() {
+    const bucket = 'discofish'
+    const key = 'worms/audio/woman.mp3'
+    // const [isPlaying, setIsPlaying] = useState(false);
+    const [sound, setSound] = useState(null);
     useEffect(() => {
         function handleScroll() {
           const scrollFraction = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
           const backgroundOpacity = Math.min(0.99, scrollFraction); // Maximum background opacity set to 0.5
           document.documentElement.style.setProperty('--background-opacity', backgroundOpacity);
+          if (sound) {
+            const scrollFraction = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            const volume = Math.min(1, Math.max(0, scrollFraction)); // Ensure volume is between 0 and 1
+            sound.volume = volume;
+          }
         }
     
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
+      }, [sound]);
+
+      useEffect(() => {
+        const fetchSound = async () => {
+          try {
+    
+            // Configure AWS SDK
+            const s3 = new S3Client({
+              region: 'us-east-2',
+              credentials: {
+                accessKeyId: process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID,
+                secretAccessKey: process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY,
+              },
+            });
+            
+            // Fetch the audio file
+            const { Body } = await s3.send(new GetObjectCommand({ Bucket: bucket, Key: key }));
+    
+            const blob = await streamToBlob(Body);
+            const objectUrl = URL.createObjectURL(blob);
+    
+            var audio = new Audio(objectUrl);
+            
+            setSound(audio);
+          } catch (error) {
+            console.error('Error fetching mp3:', error);
+          }
+        };
+    
+        fetchSound();
       }, []);
+
+    useEffect(() => {
+        if (sound) {
+        sound.play();
+        sound.volume = 0;
+        }
+    }, [sound]);
+    
+      // Function to convert a ReadableStream to a Blob
+      async function streamToBlob(readableStream) {
+        const reader = readableStream.getReader();
+        const chunks = [];
+    
+        while (true) {
+          const { done, value } = await reader.read();
+    
+          if (done) {
+            break;
+          }
+    
+          if (!(value instanceof Uint8Array)) {
+            throw new Error('Invalid value type in ReadableStream');
+          }
+    
+          chunks.push(value);
+        }
+    
+        return new Blob(chunks, { type: 'audio/mpeg' });
+      }
+    
   return (
     <main className='main'>
       <div className='container'>
