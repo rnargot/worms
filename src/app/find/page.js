@@ -111,7 +111,7 @@ export default function find() {
       <div className='text'>wont even be able to </div>
       <div className='text'>find</div>
       <div className='text'>me</div>
-      <div className='credit'>margot murvihill</div>
+      <div className='credit'>by margot elise</div>
         </div>
     </main>
   );
