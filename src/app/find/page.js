@@ -18,6 +18,7 @@ export default function find() {
             const volume = Math.min(1, Math.max(0, scrollFraction)); // Ensure volume is between 0 and 1
             sound.volume = volume;
           }
+          
         }
     
         window.addEventListener("scroll", handleScroll);
