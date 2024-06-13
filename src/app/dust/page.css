@@ -4,7 +4,7 @@
       url('./W95FA.otf');
   }
   .main {
-    background-image: url('./swim.png');
+    background-image: url('./dust2.png');
     /* display:flex; */
     flex-direction: column;
     /* align-items: center; */

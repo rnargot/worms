@@ -1,9 +1,5 @@
 .main {
-    /* background-image: url('./gather.png'); */
     background-size:cover;
-    /* background-repeat: repeat; */
-    /* display: flex; */
-    /* justify-content: space-between; */
     width: 100%;
     height: 200vh;
 }
@@ -28,13 +24,6 @@
     font-family: 'Overused Grotesk';
     font-size: 32pt;
     color: rgba(255, 255, 255, 0.537);
-    /* align-items: center;
-    margin-left: auto;
-    justify-content: space-between;
-    position: absolute;
-    width: 50vh;
-    top: 240%;
-    left:0%; */
 }
 .content {
     max-height: 0;
@@ -54,13 +43,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    /* margin-left: auto;
-    position: absolute;
-    top: 60%;
-    left:0%;
-    justify-content: space-between;
-    justify-content: space-between; */
-
   }
   .category1 {
     font-size: large;
@@ -71,12 +53,6 @@
     align-items: center;
     cursor: pointer;
     align-items: center;
-    /* margin-left: auto;
-    position: absolute;
-    top: 270%;
-    left:0%;
-    left:0%; */
-
   }
   .inspo{
     font-size: large;
@@ -90,4 +66,27 @@
   .icon {
     margin-top: 1vh;
     margin-left: 1vh;
+  }
+  .email {
+    font-size: large;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.217);
+    font-family: 'Overused Grotesk';
+    font-size: 24pt;
+  }
+  @media (max-width: 768px) {
+    .email {
+      font-size: large;
+      position: absolute;
+      color: rgba(255, 255, 255, 0.217);
+      font-family: 'Overused Grotesk';
+      font-size: 24pt;
+      top: 55vh;
+    }
+    .description {
+      margin-top: 20vh;
+    }
+    .inspo {
+      top: 170%;
+    }
   }

@@ -11,8 +11,13 @@ import Image from 'next/image'
 export default function cool() {
   return (
     <main className='main'>
-      <div className='title'>"usual heart" (1/6)</div>
+      <div className='container'>
+       
+       
+      <div className='site-container'>
+        
       <div className='site'>
+      <div className='title'>"usual heart" (1/7)</div>
       <a href="https://www.margo.cool" target="_blank" rel="noreferrer">
       <Image className='logo'
                src={folder}
@@ -34,6 +39,7 @@ export default function cool() {
               <h2 className='website'>{"worms.cool (3/7)"}</h2>
         </a>
         </div>
+        <br></br>
         <div className='site'>
         <a href="https://vanish.love/" target="_blank" rel="noreferrer">
       <Image className='logo'
@@ -79,6 +85,9 @@ export default function cool() {
         </a>
 </div>
 
+      </div>
+      
+      </div>
         
     </main>
   );

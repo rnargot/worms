@@ -28,7 +28,7 @@ export default function beauty() {
               </span>
             </div>
             <div className={selected==0 ? 'content show' : 'content'}>
-              <p>|__  a small contribution towards recentering web space around community</p>
+              <p>|__  a small contribution towards recentering web space around art and community</p>
             </div>
             <div className='by'>created by </div>
             <div className='category1' onClick={() => toggle(1)}>
@@ -80,7 +80,10 @@ export default function beauty() {
               </a>
             </div>
           </div>
-      <div className='inspo'> inspired by ambient creators </div>
+<div className='email'>
+  your art deserves space on the internet.
+</div>
+      <div className='inspo'>send your vision to mother@discofish.cool. inspired by ambient creators. </div>
       {/* <div className='description1'> a small contribution towards reinventing web space  </div>
       <div className='description2'> you are safe here  </div> */}
       <>

@@ -9,6 +9,7 @@
     width: 100vw;
     height: 150vh;
     font-family: W95;
+    overflow-y: scroll;
 }
 .disco {
     display: flex;

@@ -22,3 +22,14 @@
     bottom:40vh;
     right:0vh;
 }
+.logo {
+    margin-top: 5vh;
+    margin-right: 2vh;
+    height: 10vh;
+    width: 10vh;
+  }
+  .website {
+    font-family: 'Overused Grotesk';
+    font-size: 16pt;
+    color: black;
+  }
