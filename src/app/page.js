@@ -9,9 +9,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 import { Analytics } from '@vercel/analytics/react';
-
+import RainbowText from './RainbowText';
 
 export default function Home() {
+  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
   const router = useRouter()
   const [selected, setSelected] = useState(null);
   const toggle = i => {
@@ -22,7 +23,9 @@ export default function Home() {
   }
   return (
     <main className='main'>
-      <div className='title'>discofish</div>
+      <div className='title'>
+      <RainbowText text="DiscoFish" />
+        </div>
       <div className='concepts-accordion'>
         {org.map((item, i) => (
           <div className='item'>
