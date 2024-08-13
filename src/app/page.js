@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 import { Analytics } from '@vercel/analytics/react';
-import RainbowText from './RainbowText';
+// import RainbowText from './RainbowText';
 
 export default function Home() {
   const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
@@ -24,7 +24,8 @@ export default function Home() {
   return (
     <main className='main'>
       <div className='title'>
-      <RainbowText text="DiscoFish" />
+      {/* <RainbowText text="DiscoFish" /> */}
+      DiscoFish
         </div>
       <div className='concepts-accordion'>
         {org.map((item, i) => (
