@@ -6,6 +6,7 @@ import cd from './components/cd.png'
 import document from './components/document.png'
 import image from './components/image.png'
 import Link from 'next/link';
+import Popup from './Popup.js';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 import { Analytics } from '@vercel/analytics/react';
@@ -21,6 +22,7 @@ export default function Home() {
     }
     setSelected(i)
   }
+  const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <main className='main'>
       <div className='title'>
@@ -52,6 +54,15 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <button className='btn btn-primary' onClick={() => setButtonPopup(true)}>
+            <div className='btn-text'>terms & privacy</div>
+      </button>
+      <div className='child child-1'>
+        <Popup  trigger={buttonPopup} setTrigger={setButtonPopup}> 
+        <br></br>
+        <div className='poem'>discofish is a static website and does not collect any user data.</div>
+        </Popup>
+        </div>
      <Analytics />
     </main>
   )

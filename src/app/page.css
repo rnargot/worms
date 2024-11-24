@@ -52,6 +52,84 @@
     font-size: 24pt;
     display: flex;
     align-items: center;
-  
-    
   }
+  .btn {
+    position: relative;
+    transition: all 0.2s ease;
+    letter-spacing: 0.025em;
+    font-size: .6rem;
+    border-radius: 0.125rem;
+    padding: .6rem 1rem;
+    max-height: 37px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    width: 120px;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+.btn-primary {
+    color: #000;
+    background-color: #c0c0c0;
+    border-color: #a0a0a0;
+    
+}
+.btn-text {
+    border: 1px solid transparent;
+    font-family: W95;
+    font-size: 12px;
+}
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+.btn:before {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #858585;
+    border-bottom: 2px solid #858585;
+}
+.btn:not(:disabled):not(.disabled):active:before,
+.btn:not(:disabled):not(.disabled):active:focus:before {
+    border-color: transparent;
+    color: #000;
+}
+
+.btn .btn-text {
+    border: 1px solid transparent;
+}
+
+.btn:not(:disabled):not(.disabled):active .btn-text,
+.btn:not(:disabled):not(.disabled):active:focus .btn-text {
+    border: 1px dotted #000;
+}
+.child {
+  position: absolute;
+}
+.child-1 {
+  left: 0vw;
+  top: 50vh;
+}
+.poem {
+  font-family: 'W95';
+  font-size: 16px;
+  color: black;
+  font-family: W95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+  
