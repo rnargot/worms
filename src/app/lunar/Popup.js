@@ -6,7 +6,7 @@ function Popup(props) {
         <div className='popup'>
             <div className='card card-tertiary'>
                 <div className='card-header'>
-                <div className="header-text">admission</div>
+                <div className="header-text">恭喜發財</div>
                 </div>
                 { props.children }
                 {/* <button className='pbtn pbtn-primary' onClick={() => props.setTrigger(false)}>OK</button> */}

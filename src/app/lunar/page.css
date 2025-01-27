@@ -4,7 +4,7 @@
       url('./W95FA.otf');
   }
   .main {
-    background-image: url('./party.png');
+    background-image: url('./lunar.jpg');
     background-size:contain;
     /* background-repeat: repeat; */
     /* display: flex; */
@@ -134,6 +134,17 @@
     align-items: center;
     font-family: 'W95';
     font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: W95;
+    background-color: aliceblue;
+}
+.haus {
+    text-decoration: line-through;
+    font-family: 'W95';
+    font-size: 16px;
     color: black;
     font-family: W95;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5vw;
 }
