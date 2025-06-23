@@ -29,25 +29,23 @@ export default function bighaus() {
 <div className='poem1'>what</div>
 <div className='poem'>celebrating our new home in pioneer square!</div>
 <br></br>
+<div className='poem'>✧food & drinks</div>
+<div className='poem'>✧optional life updates powerpoint</div>
+<div className='poem'>✧poker/dominoes/mahjong</div>
+<div className='poem'>✧prob a jam sesh at some point</div>
+<br></br>
 <div className='poem1'>where</div>
 <div className='poem'>Quilt Builting</div> 
 <div className='poem'>318 1st Ave S Apt 506</div>
 <br></br>
 <div className='poem1'>when</div>
-<div className='poem'>Sunday, June 29</div>
-<div className='poem'>food & drinks @ 4pm*</div>
-<div className='poem'>optional clothing repair workshop @ 6pm*</div>
-<div className='poem'>optional life updates ppt @ 8pm*</div>
-<div className='poem'>prob a jam sesh at some point</div>
-<br></br>
-<div className='poem'>drop in whenever you can!</div>
-
+<div className='poem'>Sunday, June 29 @ 4pm*</div>
 <br></br>
 <div className='poem1'>RSVP</div>
-<div className='poem'>pls email mother@discofish.cool+ </div>
+<div className='poem'>plus ones welcome, pls email mother@discofish.cool+ </div>
 <br></br>
 <div className='poem'>*all times are in GST (girlie standard time)</div>
-<div className='poem'>+u can text me too but im a fiend for the email dopamine hit</div>
+<div className='poem'>+u can text me too but an email warms my heart (dopamine)</div>
 <br></br>
 </PopupPoem>
             <div className='credit'>see u soon besties ^_^</div>
