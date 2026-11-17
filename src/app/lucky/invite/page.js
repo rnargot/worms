@@ -35,8 +35,10 @@ export default async function InvitePage({ searchParams }) {
           <p className="lucky-line">70 pine</p>
           <p className="lucky-label">when</p>
           <p className="lucky-line">12/12</p>
+          <p className="lucky-label">wear</p>
+          <p className="lucky-line">something lucky</p>
           <p className="lucky-label">bring</p>
-          <p className="lucky-line">yourself. that is the whole list.</p>
+          <p className="lucky-line">a deck of cards and a good luck charm</p>
           <p className="lucky-signoff">see u soon besties ^_^</p>
           <Link className="lucky-home" href="/" referrerPolicy="no-referrer">
             swim home
