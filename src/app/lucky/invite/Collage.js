@@ -21,7 +21,7 @@ const layers = [
 ]
 
 const depths = [0, 1, 2, 3, 4, 5]
-const startAt = [0, 520, 1150, 2000, 3200, 5000]
+const startAt = [0, 160, 340, 560, 840, 1180]
 
 function preload(src) {
   return new Promise((resolve) => {
@@ -44,7 +44,7 @@ export default function Collage() {
 
     if (reduce) {
       Promise.all(Object.values(ready)).then(() => {
-        if (!cancelled) setShown([...layers.map((layer) => layer.src), 'tint'])
+        if (!cancelled) setShown(layers.map((layer) => layer.src))
       })
       return () => {
         cancelled = true
@@ -55,12 +55,11 @@ export default function Collage() {
     ;(async () => {
       for (const depth of depths) {
         const group = layers.filter((layer) => layer.depth === depth).map((layer) => layer.src)
-        if (depth === 2) group.push('tint')
         const elapsed = performance.now() - started
         const hold = new Promise((resolve) => {
           setTimeout(resolve, Math.max(0, startAt[depth] - elapsed))
         })
-        await Promise.all([hold, ...group.filter((src) => src !== 'tint').map((src) => ready[src])])
+        await Promise.all([hold, ...group.map((src) => ready[src])])
         if (cancelled) return
         setShown((current) => [...current, ...group])
       }
@@ -82,7 +81,7 @@ export default function Collage() {
           className={shown.includes(layer.src) ? `${layer.className} is-in` : layer.className}
         />
       ))}
-      <div className={shown.includes('tint') ? 'lucky-bg-tint is-in' : 'lucky-bg-tint'} data-depth="2" />
+      <div className="lucky-bg-tint" />
     </div>
   )
 }
