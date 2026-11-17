@@ -33,8 +33,10 @@ function DeadLink({ children }) {
 export default function Gate() {
   const [query, setQuery] = useState('')
   const [searching, setSearching] = useState(false)
+  const [unlucky, setUnlucky] = useState(false)
   const [blocks, setBlocks] = useState(0)
   const cancelRef = useRef(null)
+  const okRef = useRef(null)
 
   useEffect(() => {
     if (!searching) {
@@ -66,6 +68,16 @@ export default function Gate() {
     }
   }, [searching])
 
+  useEffect(() => {
+    if (!unlucky) return undefined
+    okRef.current?.focus()
+    const onKey = (event) => {
+      if (event.key === 'Escape') setUnlucky(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [unlucky])
+
   function openSearch(event) {
     event.preventDefault()
     setSearching(true)
@@ -74,7 +86,8 @@ export default function Gate() {
   async function tryLucky() {
     const data = new FormData()
     data.set('q', query)
-    await feelLucky(data)
+    const result = await feelLucky(data)
+    if (result?.ok === false) setUnlucky(true)
   }
 
   function subscribe(event) {
@@ -193,6 +206,43 @@ export default function Gate() {
                 Cancel
               </button>
             </div>
+          </div>
+        </div>
+      ) : null}
+
+      {unlucky ? (
+        <div className="lucky-overlay" role="presentation">
+          <div
+            className="lucky-dialog lucky-error"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lucky-unlucky-title"
+          >
+            <div className="lucky-dialog-bar">
+              <span id="lucky-unlucky-title">Windows Networking</span>
+              <button
+                type="button"
+                className="lucky-dialog-x"
+                onClick={() => setUnlucky(false)}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <div className="lucky-error-body">
+              <span className="lucky-error-icon" aria-hidden="true">
+                ×
+              </span>
+              <p>that wasnt very lucky of you.</p>
+            </div>
+            <button
+              ref={okRef}
+              type="button"
+              className="lucky-error-ok"
+              onClick={() => setUnlucky(false)}
+            >
+              OK
+            </button>
           </div>
         </div>
       ) : null}

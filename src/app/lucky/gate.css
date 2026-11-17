@@ -243,3 +243,43 @@
   background: #d4d0c8;
   color: #000000;
 }
+
+.lucky-error {
+  width: 380px;
+}
+
+.lucky-error-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 16px 6px 18px;
+}
+
+.lucky-error-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #cc0000;
+  color: #ffffff;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lucky-error-body p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.lucky-error-ok {
+  display: block;
+  margin: 10px auto 14px;
+  min-width: 75px;
+  background: #d4d0c8;
+  color: #000000;
+}
