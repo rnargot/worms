@@ -29,12 +29,21 @@ export default async function InvitePage({ searchParams }) {
           <p className="lucky-hello">you are invited!</p>
           <p className="lucky-label">what</p>
           <p className="lucky-line">
-            come celebrate easy prosper (yi baat) for Margot&apos;s 28th birthday
+            come celebrate easy prosper (yi baat) for Margot&apos;s 28th birthday!
           </p>
+          <p className="lucky-line">we will be playing games like</p>
+          <ul className="lucky-games">
+            <li>blitz</li>
+            <li>mahjong</li>
+            <li>bingo</li>
+            <li>poker</li>
+            <li>dominos</li>
+            <li>trivia</li>
+          </ul>
           <p className="lucky-label">where</p>
           <p className="lucky-line">70 pine</p>
           <p className="lucky-label">when</p>
-          <p className="lucky-line">12/12</p>
+          <p className="lucky-line">12/12, 6pm</p>
           <p className="lucky-label">wear</p>
           <p className="lucky-line">something lucky</p>
           <p className="lucky-label">bring</p>

@@ -259,6 +259,7 @@
 .lucky-hello,
 .lucky-label,
 .lucky-line,
+.lucky-games,
 .lucky-signoff,
 .lucky-home {
   font-family: W95, Tahoma, sans-serif;
@@ -279,6 +280,13 @@
 .lucky-line {
   font-size: 16px;
   margin-top: 2px;
+  line-height: 1.35;
+}
+
+.lucky-games {
+  margin: 2px 0 0;
+  padding-left: 1.2em;
+  font-size: 16px;
   line-height: 1.35;
 }
 
