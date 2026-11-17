@@ -30,6 +30,31 @@
   pointer-events: none;
 }
 
+.lucky-bg img,
+.lucky-bg-tint {
+  opacity: 0;
+  transition: opacity var(--rise, 0.9s) ease;
+}
+
+.lucky-bg img.is-in,
+.lucky-bg-tint.is-in {
+  opacity: var(--shown, 1);
+}
+
+.lucky-bg [data-depth='0'] { --rise: 0.55s; }
+.lucky-bg [data-depth='1'] { --rise: 0.85s; }
+.lucky-bg [data-depth='2'] { --rise: 1.15s; }
+.lucky-bg [data-depth='3'] { --rise: 1.5s; }
+.lucky-bg [data-depth='4'] { --rise: 1.9s; }
+.lucky-bg [data-depth='5'] { --rise: 2.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lucky-bg img,
+  .lucky-bg-tint {
+    transition: none;
+  }
+}
+
 .lucky-bg-grove,
 .lucky-bg-pool-green,
 .lucky-bg-pool-red,
@@ -58,7 +83,7 @@
   top: -6%;
   width: 22%;
   height: 112%;
-  opacity: 0.92;
+  --shown: 0.92;
   object-position: 35% 40%;
 }
 
@@ -68,7 +93,7 @@
   top: -12%;
   width: 68%;
   height: 124%;
-  opacity: 0.94;
+  --shown: 0.94;
   object-position: 40% 45%;
 }
 
@@ -78,7 +103,7 @@
   top: -10%;
   width: 70%;
   height: 120%;
-  opacity: 0.94;
+  --shown: 0.94;
   object-position: 55% 40%;
 }
 
@@ -88,7 +113,7 @@
   top: -16%;
   width: 52%;
   height: 48%;
-  opacity: 0.92;
+  --shown: 0.92;
   object-position: 50% 30%;
   transform: rotate(3deg);
 }
@@ -99,7 +124,7 @@
   top: 18%;
   width: 34%;
   height: 78%;
-  opacity: 0.94;
+  --shown: 0.94;
   object-position: 72% 50%;
 }
 
@@ -109,7 +134,7 @@
   top: 2%;
   width: 36%;
   height: 40%;
-  opacity: 0.96;
+  --shown: 0.96;
   object-position: 18% 42%;
 }
 
@@ -119,7 +144,7 @@
   top: 60%;
   width: 88%;
   height: 48%;
-  opacity: 0.95;
+  --shown: 0.95;
   transform: rotate(-2deg);
 }
 
@@ -129,7 +154,7 @@
   top: 34%;
   width: 50%;
   height: 74%;
-  opacity: 0.96;
+  --shown: 0.96;
   object-position: 42% 58%;
 }
 
@@ -139,7 +164,7 @@
   top: -12%;
   width: 48%;
   height: 46%;
-  opacity: 0.9;
+  --shown: 0.9;
 }
 
 .lucky-bg-captcha {
@@ -148,7 +173,7 @@
   top: 0;
   width: 34%;
   height: 26%;
-  opacity: 0.92;
+  --shown: 0.92;
   object-position: 50% 18%;
 }
 
@@ -158,7 +183,7 @@
   top: 20%;
   width: 38%;
   height: 24%;
-  opacity: 0.94;
+  --shown: 0.94;
   object-position: 50% 42%;
 }
 
@@ -168,7 +193,7 @@
   top: 58%;
   width: 40%;
   height: 46%;
-  opacity: 0.92;
+  --shown: 0.92;
   transform: rotate(-8deg);
 }
 
@@ -178,7 +203,7 @@
   top: 66%;
   width: 44%;
   height: 38%;
-  opacity: 0.9;
+  --shown: 0.9;
   object-position: 35% 70%;
 }
 
@@ -188,7 +213,7 @@
   top: 0;
   width: 54%;
   height: 16%;
-  opacity: 0.95;
+  --shown: 0.95;
   object-position: 50% 48%;
 }
 
@@ -198,7 +223,7 @@
   top: 52%;
   width: 32%;
   height: 42%;
-  opacity: 0.94;
+  --shown: 0.94;
   object-position: 68% 62%;
 }
 
