@@ -13,6 +13,24 @@ export const metadata = {
   },
 }
 
+const collage = [
+  { src: '/invite-bg/bamboo-grove.jpg', className: 'lucky-bg-grove' },
+  { src: '/invite-bg/pool-green.jpg', className: 'lucky-bg-pool-green' },
+  { src: '/invite-bg/pool-red.jpg', className: 'lucky-bg-pool-red' },
+  { src: '/invite-bg/golden-bamboo.jpg', className: 'lucky-bg-golden' },
+  { src: '/invite-bg/green-bamboo.jpg', className: 'lucky-bg-green-bamboo' },
+  { src: '/invite-bg/fly-agaric.jpg', className: 'lucky-bg-agaric' },
+  { src: '/invite-bg/mushroom-circle.jpg', className: 'lucky-bg-mushrooms' },
+  { src: '/invite-bg/chick-on-scale.jpg', className: 'lucky-bg-scale' },
+  { src: '/invite-bg/clovers.jpg', className: 'lucky-bg-clovers' },
+  { src: '/invite-bg/lucky-you-captcha.jpg', className: 'lucky-bg-captcha' },
+  { src: '/invite-bg/rabbit-luck.jpg', className: 'lucky-bg-rabbit' },
+  { src: '/invite-bg/lucky-slipper.jpg', className: 'lucky-bg-slipper' },
+  { src: '/invite-bg/feel-lucky-cartoon.jpg', className: 'lucky-bg-cartoon' },
+  { src: '/invite-bg/jade-comb.jpg', className: 'lucky-bg-comb' },
+  { src: '/invite-bg/brown-chick.jpg', className: 'lucky-bg-chick' },
+]
+
 export default async function InvitePage({ searchParams }) {
   const presented = typeof searchParams?.t === 'string' ? searchParams.t : ''
   if (!(await passesGate(presented))) {
@@ -21,6 +39,12 @@ export default async function InvitePage({ searchParams }) {
 
   return (
     <main className="lucky-invite">
+      <div className="lucky-bg" aria-hidden="true">
+        {collage.map((layer) => (
+          <img key={layer.src} src={layer.src} alt="" className={layer.className} />
+        ))}
+        <div className="lucky-bg-tint" />
+      </div>
       <div className="lucky-window">
         <div className="lucky-titlebar">you are invited</div>
         <div className="lucky-invite-body">
