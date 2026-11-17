@@ -43,7 +43,7 @@ export default async function InvitePage({ searchParams }) {
           <p className="lucky-label">where</p>
           <p className="lucky-line">70 pine</p>
           <p className="lucky-label">when</p>
-          <p className="lucky-line">12/12, 6pm</p>
+          <p className="lucky-line">12/12 @ 6pm</p>
           <p className="lucky-label">wear</p>
           <p className="lucky-line">something lucky</p>
           <p className="lucky-label">bring</p>
