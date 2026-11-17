@@ -131,7 +131,6 @@ export default function well() {
             </div>
             <div className={selected==0 ? 'content show' : 'content'}>
             <p>poem written by grace isabel gius</p>
-            <p>audio produced by sky kistler</p>
             </div>
           </div>
         </div>
