@@ -184,14 +184,22 @@
   padding: 3px 4px 3px 8px;
 }
 
-.lucky-dialog-x {
+.lucky-gate .lucky-dialog-x {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   width: 18px;
-  height: 18px;
+  height: 16px;
+  margin: 0;
   padding: 0;
-  line-height: 14px;
+  line-height: 1;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
   background: #d4d0c8;
   color: #000000;
-  font-size: 14px;
 }
 
 .lucky-dialog-body {
@@ -204,7 +212,10 @@
 }
 
 .lucky-progress {
+  display: flex;
+  gap: 3px;
   height: 18px;
+  padding: 2px;
   border-top: 2px solid #808080;
   border-left: 2px solid #808080;
   border-right: 2px solid #ffffff;
@@ -215,24 +226,14 @@
 }
 
 .lucky-progress span {
-  display: block;
+  flex: 1 1 0;
   height: 100%;
-  width: 200%;
-  background: repeating-linear-gradient(
-    90deg,
-    #000080 0 14px,
-    #ffffff 14px 22px
-  );
-  animation: lucky-crawl 0.7s linear infinite;
+  width: auto;
+  background: transparent;
 }
 
-@keyframes lucky-crawl {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-22px);
-  }
+.lucky-progress span.on {
+  background: #000080;
 }
 
 .lucky-cancel {

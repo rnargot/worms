@@ -4,19 +4,66 @@ import { useEffect, useRef, useState } from 'react'
 import { feelLucky } from './actions'
 import './gate.css'
 
+const BLOCKS = 20
+const MAIL_LIST = 'mother@discofish.cool'
+const EMAIL_HINT = 'your e-mail'
+
+function nextBlockDelay(filled) {
+  if (filled >= BLOCKS - 1) return null
+  const stallAt = Math.round(BLOCKS * 0.7)
+  const next = filled + 1
+  if (next <= stallAt) return 280
+  const pastStall = next - stallAt
+  return Math.round(900 * 2 ** (pastStall - 1))
+}
+
+function DeadLink({ children }) {
+  return (
+    <a
+      role="link"
+      onClick={(event) => {
+        event.preventDefault()
+      }}
+    >
+      {children}
+    </a>
+  )
+}
+
 export default function Gate() {
   const [query, setQuery] = useState('')
   const [searching, setSearching] = useState(false)
+  const [blocks, setBlocks] = useState(0)
   const cancelRef = useRef(null)
 
   useEffect(() => {
-    if (!searching) return undefined
+    if (!searching) {
+      setBlocks(0)
+      return undefined
+    }
     cancelRef.current?.focus()
     const onKey = (event) => {
       if (event.key === 'Escape') setSearching(false)
     }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+
+    let filled = 0
+    let timer
+    const tick = () => {
+      const delay = nextBlockDelay(filled)
+      if (delay == null) return
+      timer = window.setTimeout(() => {
+        filled += 1
+        setBlocks(filled)
+        tick()
+      }, delay)
+    }
+    tick()
+
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('keydown', onKey)
+    }
   }, [searching])
 
   function openSearch(event) {
@@ -30,8 +77,12 @@ export default function Gate() {
     await feelLucky(data)
   }
 
-  function stay(event) {
+  function subscribe(event) {
     event.preventDefault()
+    const email = String(new FormData(event.currentTarget).get('email') ?? '')
+    const subject = encodeURIComponent('Get Mother! updates monthly!')
+    const body = encodeURIComponent(email)
+    window.location.href = `mailto:${MAIL_LIST}?subject=${subject}&body=${body}`
   }
 
   return (
@@ -77,32 +128,31 @@ export default function Gate() {
       </section>
 
       <p className="lucky-about">
-        <a href="#about" onClick={stay}>
-          About Google!
-        </a>
+        <DeadLink>About Google!</DeadLink>
       </p>
       <p className="lucky-sublinks">
-        <a href="#stanford" onClick={stay}>
-          Stanford Search
-        </a>
-        <a href="#linux" onClick={stay}>
-          Linux Search
-        </a>
+        <DeadLink>Stanford Search</DeadLink>
+        <DeadLink>Linux Search</DeadLink>
       </p>
 
       <section className="lucky-band lucky-band-lower">
-        <p className="lucky-prompt">Get Google! updates monthly!</p>
-        <form className="lucky-subscribe" onSubmit={stay}>
+        <p className="lucky-prompt">Get Mother! updates monthly!</p>
+        <form className="lucky-subscribe" onSubmit={subscribe}>
           <input
+            name="email"
             type="text"
-            defaultValue="your e-mail"
+            defaultValue={EMAIL_HINT}
             aria-label="Email"
             autoComplete="off"
+            onFocus={(event) => {
+              if (event.target.value === EMAIL_HINT) event.target.value = ''
+            }}
+            onBlur={(event) => {
+              if (event.target.value.trim() === '') event.target.value = EMAIL_HINT
+            }}
           />
           <button type="submit">Subscribe</button>
-          <a href="#archive" onClick={stay}>
-            Archive
-          </a>
+          <DeadLink>Archive</DeadLink>
         </form>
         <p className="lucky-copy">Copyright ©1997-8 Stanford University</p>
       </section>
@@ -130,7 +180,9 @@ export default function Gate() {
             <div className="lucky-dialog-body">
               <p>Loading...</p>
               <div className="lucky-progress" aria-hidden="true">
-                <span />
+                {Array.from({ length: BLOCKS }, (_, index) => (
+                  <span key={index} className={index < blocks ? 'on' : ''} />
+                ))}
               </div>
               <button
                 ref={cancelRef}
