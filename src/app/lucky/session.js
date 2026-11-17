@@ -1,25 +1,7 @@
-import { createHmac, timingSafeEqual } from 'crypto'
 import { cookies } from 'next/headers'
+import { LUCKY_COOKIE, PASS_TTL_SECONDS, passIsValid } from './token'
 
-export const LUCKY_COOKIE = 'lucky_pass'
-
-function gateSecret() {
-  return process.env.LUCKY_GATE_SECRET || 'disco-fish-lucky-gate-v1'
-}
-
-export function expectedToken() {
-  return createHmac('sha256', gateSecret()).update('passed').digest('hex')
-}
-
-export function passesGate() {
-  const got = cookies().get(LUCKY_COOKIE)?.value
-  if (!got) return false
-  const expected = expectedToken()
-  const actual = Buffer.from(got)
-  const wanted = Buffer.from(expected)
-  if (actual.length !== wanted.length) return false
-  return timingSafeEqual(actual, wanted)
-}
+export { LUCKY_COOKIE }
 
 export function luckyCookieOptions() {
   return {
@@ -27,6 +9,11 @@ export function luckyCookieOptions() {
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',
     path: '/lucky',
-    maxAge: 60 * 60 * 12,
+    maxAge: PASS_TTL_SECONDS,
   }
+}
+
+export async function passesGate(presented) {
+  const got = cookies().get(LUCKY_COOKIE)?.value
+  return passIsValid(got, presented)
 }

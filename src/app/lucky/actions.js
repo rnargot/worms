@@ -2,7 +2,8 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { LUCKY_COOKIE, expectedToken, luckyCookieOptions } from './session'
+import { LUCKY_COOKIE, luckyCookieOptions } from './session'
+import { issuePass } from './token'
 
 const PASSWORD = '28'
 
@@ -12,6 +13,7 @@ export async function feelLucky(formData) {
     return { ok: false }
   }
 
-  cookies().set(LUCKY_COOKIE, expectedToken(), luckyCookieOptions())
-  redirect('/lucky/invite')
+  const pass = await issuePass()
+  cookies().set(LUCKY_COOKIE, pass, luckyCookieOptions())
+  redirect(`/lucky/invite?t=${encodeURIComponent(pass)}`)
 }

@@ -13,8 +13,9 @@ export const metadata = {
   },
 }
 
-export default function InvitePage() {
-  if (!passesGate()) {
+export default async function InvitePage({ searchParams }) {
+  const presented = typeof searchParams?.t === 'string' ? searchParams.t : ''
+  if (!(await passesGate(presented))) {
     redirect('/lucky')
   }
 
@@ -41,7 +42,7 @@ export default function InvitePage() {
           <p className="lucky-label">bring</p>
           <p className="lucky-line">yourself. that is the whole list.</p>
           <p className="lucky-signoff">see u soon besties ^_^</p>
-          <Link className="lucky-home" href="/">
+          <Link className="lucky-home" href="/" referrerPolicy="no-referrer">
             swim home
           </Link>
         </div>
