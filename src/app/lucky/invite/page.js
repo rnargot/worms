@@ -31,9 +31,9 @@ export default async function InvitePage({ searchParams }) {
           <p className="lucky-line">
             come celebrate easy prosper (yi baat) for Margot&apos;s 28th birthday!
           </p>
-          <p className="lucky-line">we will be playing games like</p>
+          <p className="lucky-line">gambling not required but encouraged:</p>
           <ul className="lucky-games">
-            <li>blitz</li>
+            <li>pounce</li>
             <li>mahjong</li>
             <li>bingo</li>
             <li>poker</li>
@@ -48,6 +48,8 @@ export default async function InvitePage({ searchParams }) {
           <p className="lucky-line">something lucky</p>
           <p className="lucky-label">bring</p>
           <p className="lucky-line">a deck of cards and a good luck charm</p>
+          <p className="lucky-label">RSVP</p>
+          <p className="lucky-line">email mother@discofish.cool by 12/2</p>
           <p className="lucky-signoff">see u soon besties ^_^</p>
           <Link className="lucky-home" href="/" referrerPolicy="no-referrer">
             swim home
