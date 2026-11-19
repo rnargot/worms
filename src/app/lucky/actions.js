@@ -9,7 +9,7 @@ const PASSWORD = 'sun sun'
 
 export async function feelLucky(formData) {
   const query = String(formData.get('q') ?? '')
-  if (query !== PASSWORD) {
+  if (query.toLowerCase() !== PASSWORD) {
     return { ok: false }
   }
 
